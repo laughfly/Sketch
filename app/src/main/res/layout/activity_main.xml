@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.laughfly.sketch.SketchView
+        android:id="@+id/sketch_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/factory_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/factory_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/brushBtn"
+            style="@style/SketchButton"
+            android:onClick="clickBrushBtn"
+            android:text="画笔" />
+
+        <Button
+            style="@style/SketchButton"
+            android:onClick="clickLaserBtn"
+            android:text="红点" />
+
+        <Button
+            style="@style/SketchButton"
+            android:onClick="clickShapeBtn"
+            android:text="矩形" />
+
+        <Button
+            style="@style/SketchButton"
+            android:onClick="clickEraseBtn"
+            android:text="橡皮" />
+
+        <Button
+            style="@style/SketchButton"
+            android:onClick="clickUndoBtn"
+            android:text="撤销" />
+
+        <Button
+            style="@style/SketchButton"
+            android:onClick="clickRedoBtn"
+            android:text="恢复" />
+
+        <Button
+            style="@style/SketchButton"
+            android:onClick="clickCleanBtn"
+            android:text="清空" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
